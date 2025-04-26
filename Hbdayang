@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Ayang!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffd6ec, #ffc1de);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 50px;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      max-width: 500px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Embed YouTube Video for the song -->
+  <iframe width="0" height="0" src="https://www.youtube.com/embed/Yh1u_fZPn8s?autoplay=1" frameborder="0" allow="autoplay"></iframe>
+
+  <div class="card">
+    <!-- Sticker -->
+    <img src="https://media.tenor.com/je_JDwghfKEAAAAi/bear-love.gif" alt="stiker lucu" width="120" style="border-radius: 20px; margin-bottom: 15px;">
+    
+    <h1>Happy Birthday Ayang!</h1>
+    <p>Semoga panjang umur, sehat selalu, dan semua impian ayang tercapai.</p>
+    <p>Semoga rencana pernikahan kita berjalan lancar dan jadi kenyataan.</p>
+    <p>I love you more each day. You're my everything!</p>
+  </div>
+
+  <script>
+    for (let i = 0; i < 100; i++) {
+      let confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = `${Math.random() * 100}vw`;
+      confetti.style.animationDelay = `${Math.random() * 5}s`;
+      document.body.appendChild(confetti);
+    }
+  </script>
+
+</body>
+</html>
